@@ -1,0 +1,97 @@
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+.bg-main {
+  background-color: #1e202b !important;
+}
+
+.bg-second {
+  background-color: #323544;
+}
+
+.text-gray {
+  color: #999ca4;
+}
+.fs-7 {
+  font-size: 0.625rem;
+}
+.fs-6-5 {
+  font-size: 14px;
+}
+
+.btn-active {
+  padding: 0;
+  border-radius: 30px;
+}
+
+input[type="text"]::placeholder {
+  color: white;
+  text-indent: 8px;
+}
+
+input[type="text"] {
+  text-indent: 8px;
+}
+
+#search-text {
+  position: relative;
+}
+#Search-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  z-index: 70;
+}
+
+.row > .col-lg-4:nth-child(odd) {
+  background-color: #323544;
+}
+
+.row > .col-lg-4:nth-child(even) {
+  background-color: #262936;
+}
+
+.row > .col-lg-4:nth-child(odd) .forecast-header {
+  background-color: #2d303d;
+}
+
+.row > .col-lg-4:nth-child(even) .forecast-header {
+  background-color: #222531;
+}
+
+#email-box {
+  position: relative;
+}
+#email-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  z-index: 10;
+}
+
+/* <div class="location">Alexandria</div>
+<div class="degree">
+  <div class="num">16<sup>o</sup>C</div>
+
+  <div class="forecast-icon">
+    <img
+      src="https://cdn.weatherapi.com/weather/64x64/day/116.png"
+      alt=""
+      width="90"
+    />
+  </div>
+</div>
+<div class="custom">Partly cloudy</div>
+<span><img src="images/icon-umberella.png" alt="" />20%</span>
+<span><img src="images/icon-wind.png" alt="" />18km/h</span>
+<span><img src="images/icon-compass.png" alt="" />East</span> */

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assignment 11</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/all.min.css" />
+    <link rel="stylesheet" href="assets/styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+  <body style="background-color: #24353f">
+    <nav class="navbar navbar-expand-lg bg-main">
+      <div class="container pt-3 pb-3 d-flex justify-content-between">
+        <a
+          class="navbar-brand text-white d-flex align-content-center justify-content-center pt-2"
+          href="#"
+        >
+          <img
+            src="./assets/Imgs/logo.png"
+            alt="Weather app Logo"
+            style="width: 64px; height: 38px"
+            class="me-2"
+          />
+          <div class="logo-description">
+            <h1 class="site-title fs-6 mb-1">Weather</h1>
+            <p class="site-tag fs-7 text-gray">Your tagline goes here</p>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="nav-list" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item btn btn-outline-info btn-active">
+              <a
+                class="nav-link active text-white mx-3 fs-6-5"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white mx-3 fs-6-5" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white mx-3 fs-6-5" href="#"
+                >Live Cameras</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white mx-3 fs-6-5" href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white mx-3 fs-6-5" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="site-content"
+      style="background-image: url(./assets/Imgs/wallpaperbetter.jpg)"
+    >
+      <div class="location">
+        <form class="find-location">
+          <input type="text" placeholder="Enter Your Location" id="search" />
+          <input type="button" value="find" id="submit-btn" />
+        </form>
+      </div>
+      <div class="forecast-container">
+        <div id="weather">
+          <button class="btn btn-outline-info" id="search"></button>
+        </div>
+      </div>
+    </div>
+    <script src="assets/scripts/main.js"></script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
