@@ -6,7 +6,7 @@
 
 // API related Data
 const apiKey = "key=9501d442fd4c46c3b96151833241101";
-const baseUrl = "http://api.weatherapi.com/v1/forecast.json?";
+const baseUrl = "https://api.weatherapi.com/v1/forecast.json?";
 const searchLoc = "&q=";
 const forecast = "&days=3&aqi=no&alerts=no";
 
